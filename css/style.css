@@ -1,0 +1,80 @@
+.container {
+    height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.compteur {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.unite,
+.valeur {
+    font-size: 1.5rem;
+}
+
+#avertissement{
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+#EventHeading {
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.SettingIcon {
+    text-align: right;
+    margin: 1rem;
+}
+
+#modalBtn {
+    cursor: pointer;
+}
+
+/*Modal*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: grey;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+#closeModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
