@@ -28,6 +28,10 @@
     display: none;
 }
 
+#dayUnits, #hourUnits, #minuteUnits, #secondeUnits{
+    display:none;
+}
+
 #EventHeading {
     font-size: 3rem;
     text-align: center;

@@ -15,12 +15,12 @@ let validateDate = inputDate.value
 
 
 //Function
-function decompte(interval) {
+function decompte() {
 
     let dateTarget = new Date(validateDate).getTime()
 
     //Vérification qu'il y ai une date target de saisie
-    if (!inputDate.value) {
+    if (!inputDate.value && !dateTarget) {
         dayShow.textContent = 0;
         hourShow.textContent = 0;
         minuteShow.textContent = 0;
@@ -54,10 +54,23 @@ function decompte(interval) {
 
             //Affichage des données
             dayShow.textContent = dayDif;
+            verifS(dayDif, document.getElementById('dayUnits'));
             hourShow.textContent = hourDif;
+            verifS(hourDif, document.getElementById('hourUnits'));
             minuteShow.textContent = minuteDif;
+            verifS(minuteDif, document.getElementById('minuteUnits'));
             secodeShow.textContent = secondeDif;
+            verifS(secondeDif, document.getElementById('secondeUnits'));
         }
+    }
+}
+
+function verifS(data, unit){
+    if(data>0){
+        unit.style.display = "inline"
+    }else{
+        unit.style.display = "none"
+
     }
 }
 
